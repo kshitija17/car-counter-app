@@ -1,0 +1,16 @@
+# object detection 
+
+ultralytics
+hydra-core
+matplotlib>=3.2.2
+numpy
+opencv-python
+Pillow
+PyYAML
+requests
+scipy
+torch
+torchvision
+tqdm
+filterpy
+scikit-image

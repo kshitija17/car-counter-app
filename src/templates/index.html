@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Car Counter</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+<script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+
+<body class="bg-zinc-900 ">
+  <div class="flex justify-center mx-auto max-w-7xl px-6 lg:px-8 h-28 ">
+    <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl my-auto">Car Counter Application</h2>
+  </div>
+  
+<div class="isolate overflow-hidden bg-gray-900 py-8 sm:py-24 lg:py-8 p-2.5">
+  <h4 class="text-2xl text-lg tracking-tight text-white sm:text-3xl p-4 ">Select Video</h4>
+    <div class="flex justify-center mx-auto max-w-7xl px-6 lg:px-8 ">   
+      <form action="{{ url_for('car_counter')}}"method="post">  
+      <div class=" mx-auto grid max-w-2xl grid-cols-3 gap-x-8 gap-y-16 lg:max-w-none  g:grid-cols-2 bg-gray-700 p-4 ">
+
+        
+        
+        <div class=" max-w-xl lg:max-w-lg bg-gray-800 rounded-md p-4">
+          
+          <input type="radio" name="videoUrl" value="cars2-small.mp4">
+          <div class="mt-6 flex max-w-md gap-x-4">    
+                <video width="400" controls>
+                  <source src="{{ url_for('static', filename='cars2-small.mp4') }}" type="video/mp4">
+                  <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                  Your browser does not support HTML video.
+                </video>         
+                 
+          </div>
+          
+        </div>
+
+        <div class=" max-w-xl lg:max-w-lg bg-gray-800 rounded-md p-4">
+          
+          <input type="radio" name="videoUrl" value="cars2-small.mp4">
+          <div class="mt-6 flex max-w-md gap-x-4">
+             
+                <video width="400" controls>
+                  <source src="{{ url_for('static', filename='cars2-small.mp4') }}" type="video/mp4">
+                  <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                  Your browser does not support HTML video.
+                </video>
+
+          
+           
+            
+          </div>
+          
+        </div>
+
+        <div class=" max-w-xl lg:max-w-lg bg-gray-800 rounded-md p-4">
+          <input type="radio" name="videoUrl" value="cars2-small.mp4">
+          <div class="mt-6 flex max-w-md gap-x-4">
+            
+                
+                <video width="400" controls>
+                  <source src="{{ url_for('static', filename='cars2-small.mp4') }}" type="video/mp4">
+                  <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                  Your browser does not support HTML video.
+                </video>
+                
+          
+            
+            
+          </div>
+
+        </div>
+        <button type="submit" class="flex-none rounded-md bg-cyan-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-cyan-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 mt-8   justify-self-stretch">Analyze</button>
+      
+
+    </div>
+  </form>
+   </div>
+</div>
+
+<div>
+  <video id="video-player" autoplay></video>
+
+  <script>
+      // JavaScript code to load the video stream
+      var videoPlayer = document.getElementById('video-player');
+
+      videoPlayer.src = '/car_counter';
+  </script>
+</div>
+
+  
+
+
+
+
+
+
+
+</body>
+</html>
+
+
